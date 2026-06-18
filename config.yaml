@@ -1,0 +1,12 @@
+model:
+  name: deepseek-chat
+  base_url: https://api.deepseek.com/v1
+  timeout: 60
+  max_retries: 1
+
+output:
+  format: markdown
+
+guardrail:
+  enabled: true
+  rules: [G1, G2, G3, G4, G5, G6]
