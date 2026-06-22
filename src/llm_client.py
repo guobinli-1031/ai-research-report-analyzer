@@ -10,10 +10,10 @@ from openai import OpenAI
 load_dotenv()
 
 API_KEY = os.environ.get("DEEPSEEK_API_KEY", "")
-BASE_URL = "https://api.deepseek.com/v1"
-MODEL = "deepseek-chat"
-TIMEOUT = 60
-MAX_RETRIES = 1
+BASE_URL = os.environ.get("DEEPSEEK_BASE_URL", "https://api.deepseek.com/v1")
+MODEL = os.environ.get("DEEPSEEK_MODEL", "deepseek-chat")
+TIMEOUT = int(os.environ.get("DEEPSEEK_TIMEOUT", "60"))
+MAX_RETRIES = int(os.environ.get("DEEPSEEK_MAX_RETRIES", "1"))
 
 _client = OpenAI(api_key=API_KEY, base_url=BASE_URL, timeout=TIMEOUT)
 
