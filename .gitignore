@@ -1,7 +1,11 @@
 .env
 config.local.yaml
 data/samples/*.pdf
+samples/*.pdf
 *.log
 __pycache__/
+.pytest_cache/
 *.pyc
-__pycache__
+codex-benchmark/
+moonbridge-test/
+test_hello.py
